@@ -1,222 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Trade With Munaaf</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:#0f172a;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-color:#fff;
-}
-
-/* CARD */
-
-.container{
-width:95%;
-max-width:420px;
-padding:30px 25px;
-border-radius:18px;
-
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(12px);
-
-border:1px solid rgba(255,255,255,0.08);
-
-box-shadow:0 20px 60px rgba(0,0,0,0.6);
-text-align:center;
-}
-
-/* LOGO */
-
-.logo{
-width:80px;
-height:80px;
-border-radius:50%;
-border:2px solid #FFD700;
-margin-bottom:12px;
-}
-
-/* TEXT */
-
-h1{
-font-size:22px;
-color:#FFD700;
-margin-bottom:6px;
-}
-
-h2{
-font-size:15px;
-opacity:0.9;
-margin-bottom:10px;
-}
-
-.sub{
-font-size:13px;
-opacity:0.7;
-margin-bottom:18px;
-}
-
-/* BUTTON */
-
-.btn{
-display:block;
-text-decoration:none;
-background:#22c55e;
-color:#000;
-font-weight:700;
-padding:16px;
-border-radius:10px;
-margin:12px 0;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#16a34a;
-transform:scale(1.03);
-}
-
-/* TRUST BOX */
-
-.trust{
-background:rgba(0,255,150,0.08);
-padding:10px;
-border-radius:10px;
-font-size:13px;
-margin-bottom:15px;
-border:1px solid rgba(0,255,150,0.2);
-}
-
-/* LIST */
-
-.points{
-list-style:none;
-font-size:14px;
-text-align:left;
-margin:15px 0;
-}
-
-.points li{
-margin:8px 0;
-}
-
-/* URGENCY */
-
-.timer{
-margin-top:10px;
-font-size:13px;
-color:#facc15;
-}
-
-/* SOCIAL PROOF */
-
-.proof{
-margin-top:12px;
-font-size:12px;
-opacity:0.7;
-}
-
-/* FOOTER BRAND */
-
-.footer{
-margin-top:20px;
-font-size:12px;
-opacity:0.6;
-}
-
-.footer a{
-color:#38bdf8;
-text-decoration:none;
-font-weight:600;
-}
-
-.footer a:hover{
-text-decoration:underline;
-}
-
-/* RISK */
-
-.risk{
-margin-top:10px;
-font-size:11px;
-opacity:0.5;
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pushkar Raj Thakur Official - Educational Stock Market Insights</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            green: '#00E676',
+                            emerald: '#10B981',
+                            dark: '#0B0F19',
+                            card: 'rgba(17, 24, 39, 0.7)',
+                            border: 'rgba(255, 255, 255, 0.1)',
+                            telegram: '#229ED9',
+                            telegramHover: '#1D88BC'
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        glow: {
+                            '0%': { boxShadow: '0 0 15px rgba(0, 230, 118, 0.3)' },
+                            '100%': { boxShadow: '0 0 35px rgba(0, 230, 118, 0.7)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #080B11;
+            color: #F3F4F6;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-nav {
+            background: rgba(8, 11, 17, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #FFFFFF 0%, #A5F3FC 50%, #00E676 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .badge-gradient {
+            background: linear-gradient(135deg, rgba(0, 230, 118, 0.15) 0%, rgba(34, 158, 217, 0.15) 100%);
+            border: 1px solid rgba(0, 230, 118, 0.3);
+        }
+        /* Custom Ticker animation */
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+        .ticker-wrap {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .ticker-move {
+            display: inline-block;
+            white-space: nowrap;
+            animation: ticker 25s linear infinite;
+        }
+        .ticker-item {
+            display: inline-block;
+            padding: 0 1.5rem;
+        }
+    </style>
 </head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-brand-green selection:text-black">
 
-<body>
+    <!-- Ambient Background Glows -->
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-brand-green/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+    <div class="fixed bottom-0 right-0 w-[400px] h-[400px] bg-brand-telegram/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
 
-<div class="container">
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 glass-nav py-3 px-4 sm:px-8">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <!-- Brand Identity -->
+            <div class="flex items-center gap-3">
+                <div class="relative">
+                    <img src="https://iili.io/nrcbJnV.jpg" alt="Pushkar Raj Thakur Official Logo" class="w-10 h-10 rounded-full object-cover border-2 border-brand-green/40 shadow-lg" onerror="this.src='https://placehold.co/100x100/10B981/ffffff?text=PRT'">
+                    <span class="absolute -bottom-1 -right-1 bg-blue-500 text-white w-4 h-4 rounded-full flex items-center justify-center text-[9px]">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+                </div>
+                <div>
+                    <h1 class="text-sm sm:text-base font-bold tracking-tight text-white flex items-center gap-1.5">
+                        𝙋𝙐𝙎𝙃𝙆𝘼𝙍 𝙍𝘼𝙅 𝙏𝙃𝘼𝙆𝙐𝙍 <span class="text-xs px-1.5 py-0.5 rounded bg-brand-green/20 text-brand-green font-semibold">OFFICIAL</span>
+                    </h1>
+                    <p class="text-[10px] text-gray-400 font-medium">Stock Market Education & Technical Analysis</p>
+                </div>
+            </div>
 
-<img src="https://i.ibb.co/HThtfpR7/Whats-App-Image-2026-01-30-at-8-54-08-PM.jpg" class="logo">
+            <!-- Compliance Live Badge -->
+            <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full badge-gradient">
+                <span class="w-2 h-2 rounded-full bg-brand-green animate-ping"></span>
+                <span class="text-xs font-semibold text-brand-green">LIVE MARKET EDUCATION</span>
+            </div>
+        </div>
+    </header>
 
-<h1>TRADE WITH MUNAAF</h1>
-<h2>NIFTY • BANKNIFTY • OPTIONS</h2>
+    <!-- Live Market Ticker Banner -->
+    <div class="bg-gray-900/80 border-y border-white/5 py-2 text-xs text-gray-300 overflow-hidden">
+        <div class="ticker-wrap">
+            <div class="ticker-move">
+                <span class="ticker-item"><strong class="text-white">NIFTY 50:</strong> Educational Analysis Active <span class="text-brand-green">🟢</span></span>
+                <span class="ticker-item"><strong class="text-white">BANK NIFTY:</strong> Chart Pattern Insights <span class="text-brand-green">📈</span></span>
+                <span class="ticker-item"><strong class="text-white">LEARNING:</strong> Risk-Reward Management Strategies <span class="text-brand-green">🛡️</span></span>
+                <span class="ticker-item"><strong class="text-white">COMMUNITY:</strong> 50,000+ Active Market Learners <span class="text-brand-green">👥</span></span>
+                <!-- Duplicate for seamless loop -->
+                <span class="ticker-item"><strong class="text-white">NIFTY 50:</strong> Educational Analysis Active <span class="text-brand-green">🟢</span></span>
+                <span class="ticker-item"><strong class="text-white">BANK NIFTY:</strong> Chart Pattern Insights <span class="text-brand-green">📈</span></span>
+                <span class="ticker-item"><strong class="text-white">LEARNING:</strong> Risk-Reward Management Strategies <span class="text-brand-green">🛡️</span></span>
+                <span class="ticker-item"><strong class="text-white">COMMUNITY:</strong> 50,000+ Active Market Learners <span class="text-brand-green">👥</span></span>
+            </div>
+        </div>
+    </div>
 
-<p class="sub">
-Daily Intraday Trading Signals & Analysis
-</p>
+    <!-- Main Content Area -->
+    <main class="max-w-4xl mx-auto px-4 py-8 sm:py-12 flex-grow">
 
-<!-- TOP BUTTON -->
-<a href="https://t.me/+2PsKWi3L1Uk3NjZl" class="btn">
-🚀 Join Free Telegram Channel
-</a>
+        <!-- Hero Section -->
+        <section class="text-center space-y-6">
+            
+            <!-- Trust Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-brand-green/30 text-xs text-brand-green font-medium">
+                <i class="fa-solid fa-shield-halved text-sm"></i>
+                <span>100% Free Educational Stock Market Community</span>
+            </div>
 
-<div class="trust">
-✔ Trusted by 5,000+ Traders <br>
-✔ Daily Consistent Setups
-</div>
+            <!-- Profile Avatar & Title -->
+            <div class="relative inline-block">
+                <div class="w-28 h-28 sm:w-36 sm:h-36 mx-auto rounded-full p-1.5 bg-gradient-to-tr from-brand-green via-blue-500 to-emerald-400 shadow-2xl">
+                    <img src="https://iili.io/nrcbJnV.jpg" alt="Pushkar Raj Thakur Official Profile" class="w-full h-full object-cover rounded-full border-2 border-slate-900" onerror="this.src='https://placehold.co/150x150/10B981/ffffff?text=PRT'">
+                </div>
+                <div class="absolute bottom-1 right-1 bg-blue-600 text-white p-2 rounded-full shadow-lg border-2 border-slate-900 flex items-center justify-center text-xs" title="Verified Educator">
+                    <i class="fa-solid fa-check-double"></i>
+                </div>
+            </div>
 
-<ul class="points">
-<li>✔ 5–7 High Probability Trades</li>
-<li>✔ Exact Entry, SL & Target</li>
-<li>✔ Beginner Friendly Guidance</li>
-<li>✔ Live Market Updates</li>
-</ul>
+            <div class="space-y-2">
+                <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
+                    Master Technical Analysis & <br class="hidden sm:inline"/>
+                    <span class="text-gradient">Stock Market Price Action</span>
+                </h2>
+                <p class="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto font-normal leading-relaxed">
+                    Join India's premier stock market learning ecosystem. Get daily educational chart breakdowns, market structure analysis, and risk management strategies.
+                </p>
+            </div>
 
-<!-- BOTTOM BUTTON -->
-<a href="https://t.me/+2PsKWi3L1Uk3NjZl" class="btn">
-🚀 Join Free Telegram Channel
-</a>
+            <!-- Channel Quick Stats Cards -->
+            <div class="grid grid-cols-3 gap-2 sm:gap-4 max-w-md mx-auto pt-2">
+                <div class="glass-card p-3 rounded-xl text-center">
+                    <div class="text-lg sm:text-xl font-bold text-white">50K+</div>
+                    <div class="text-[10px] sm:text-xs text-gray-400">Members</div>
+                </div>
+                <div class="glass-card p-3 rounded-xl text-center">
+                    <div class="text-lg sm:text-xl font-bold text-brand-green">Daily</div>
+                    <div class="text-[10px] sm:text-xs text-gray-400">Charts</div>
+                </div>
+                <div class="glass-card p-3 rounded-xl text-center">
+                    <div class="text-lg sm:text-xl font-bold text-blue-400">100%</div>
+                    <div class="text-[10px] sm:text-xs text-gray-400">Educational</div>
+                </div>
+            </div>
 
-<div class="timer">
-⏳ Free Access Closing Soon
-</div>
+            <!-- SINGLE HIGH CONVERTING TELEGRAM CTA BUTTON -->
+            <div class="pt-6 pb-2 max-w-md mx-auto">
+                <a href="https://t.me/+RJ5_sy5mIrxiZmRl" target="_blank" rel="noopener noreferrer" class="group relative flex items-center justify-center gap-3 w-full py-4 sm:py-5 px-6 rounded-2xl bg-gradient-to-r from-emerald-500 via-brand-green to-teal-400 text-slate-950 font-black text-base sm:text-lg tracking-wide uppercase shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:shadow-brand-green/40 active:scale-[0.98] border border-emerald-300">
+                    <i class="fa-brands fa-telegram text-2xl text-slate-950 group-hover:rotate-12 transition-transform"></i>
+                    <span>JOIN TELEGRAM CHANNEL NOW</span>
+                    <i class="fa-solid fa-arrow-right text-base group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <p class="text-[11px] text-gray-400 mt-2.5 flex items-center justify-center gap-1.5">
+                    <i class="fa-solid fa-lock text-brand-green"></i> Direct Official Telegram Link • Free Lifetime Access
+                </p>
+            </div>
 
-<div class="proof">
-📈 Limited Seats • Active Community
-</div>
+        </section>
 
-<p class="risk">
-⚠ Market investments are subject to risk
-</p>
+        <!-- What You Will Learn (Features Section) -->
+        <section class="mt-12 sm:mt-16 space-y-6">
+            <div class="text-center">
+                <h3 class="text-lg sm:text-xl font-bold text-white">What You Will Learn In Our Channel</h3>
+                <p class="text-xs sm:text-sm text-gray-400">Pure stock market knowledge & technical chart education</p>
+            </div>
 
-<!-- CLEAN FOOTER -->
-<div class="footer">
-Powered by 
-<a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">
-AdsBuild Agency
-</a>
-</div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Feature 1 -->
+                <div class="glass-card p-4 rounded-xl flex items-start gap-3.5 hover:border-brand-green/30 transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-brand-green shrink-0">
+                        <i class="fa-solid fa-chart-line text-lg"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-white">Technical Analysis</h4>
+                        <p class="text-xs text-gray-400 mt-1 leading-relaxed">Daily educational analysis of Nifty, Bank Nifty, and major stocks with clear chart patterns.</p>
+                    </div>
+                </div>
 
-</div>
+                <!-- Feature 2 -->
+                <div class="glass-card p-4 rounded-xl flex items-start gap-3.5 hover:border-brand-green/30 transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
+                        <i class="fa-solid fa-shield-virus text-lg"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-white">Risk Management</h4>
+                        <p class="text-xs text-gray-400 mt-1 leading-relaxed">Learn position sizing, stop-loss strategy, and how to protect capital in volatile markets.</p>
+                    </div>
+                </div>
 
+                <!-- Feature 3 -->
+                <div class="glass-card p-4 rounded-xl flex items-start gap-3.5 hover:border-brand-green/30 transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 shrink-0">
+                        <i class="fa-solid fa-graduation-cap text-lg"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-white">Price Action Concepts</h4>
+                        <p class="text-xs text-gray-400 mt-1 leading-relaxed">Understand support & resistance, breakout concepts, and candlestick patterns step-by-step.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="glass-card p-4 rounded-xl flex items-start gap-3.5 hover:border-brand-green/30 transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 shrink-0">
+                        <i class="fa-solid fa-bullhorn text-lg"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-white">Live Market Updates</h4>
+                        <p class="text-xs text-gray-400 mt-1 leading-relaxed">Stay updated with important market news, index sentiment, and global market trends.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compliance & Meta Ads Approval Safeguard Box -->
+        <section class="mt-10 p-5 rounded-xl glass-card border border-white/5 space-y-3">
+            <div class="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span>Educational Compliance Notice</span>
+            </div>
+            <p class="text-[11px] text-gray-400 leading-relaxed">
+                This channel is strictly dedicated to stock market learning, chart analysis education, and financial literacy. We do not provide SEBI registered tips, guaranteed returns, or portfolio management services. Trading involves financial risk; always consult your certified financial advisor before investing.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer & Policy Modals Section for Meta Ads Policy Compliance -->
+    <footer class="bg-gray-950 border-t border-white/10 py-8 px-4 text-center text-xs text-gray-400 mt-12">
+        <div class="max-w-4xl mx-auto space-y-4">
+            
+            <div class="flex flex-wrap justify-center gap-4 text-xs font-medium text-gray-300">
+                <button onclick="openModal('privacyModal')" class="hover:text-brand-green transition-colors">Privacy Policy</button>
+                <span>•</span>
+                <button onclick="openModal('termsModal')" class="hover:text-brand-green transition-colors">Terms of Service</button>
+                <span>•</span>
+                <button onclick="openModal('disclaimerModal')" class="hover:text-brand-green transition-colors">Disclaimer</button>
+                <span>•</span>
+                <button onclick="openModal('contactModal')" class="hover:text-brand-green transition-colors">Contact Us</button>
+            </div>
+
+            <!-- Promoted By AD BUILD AGENCY Credit -->
+            <div class="pt-2 pb-1">
+                <a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-brand-green hover:border-brand-green/30 transition-all text-[11px] font-medium">
+                    <i class="fa-solid fa-bullhorn text-brand-green text-[10px]"></i>
+                    <span>Promoted By <strong class="text-white hover:text-brand-green">AD BUILD AGENCY</strong></span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+            </div>
+
+            <div class="text-[11px] text-gray-400 space-y-2 max-w-2xl mx-auto">
+                <p>© 2026 𝙋𝙐𝙎𝙃𝙆𝘼𝙍 𝙍𝘼𝙅 𝙏𝙃𝘼𝙆𝙐𝙍 OFFICIAL. All Rights Reserved.</p>
+                <p>
+                    Disclaimer: We are an educational platform providing stock market chart analysis and learning resources. We are not a SEBI Registered advisory entity. Meta (Facebook/Instagram) is not affiliated with this website.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS FOR META AD COMPLIANCE -->
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="glass-card bg-slate-900 max-w-lg w-full p-6 rounded-2xl max-h-[80vh] overflow-y-auto space-y-4 border border-white/10 text-left">
+            <div class="flex justify-between items-center border-b border-white/10 pb-3">
+                <h3 class="font-bold text-white text-base">Privacy Policy</h3>
+                <button onclick="closeModal('privacyModal')" class="text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+            <div class="text-xs text-gray-300 space-y-3 leading-relaxed">
+                <p>Your privacy is important to us. We do not collect or store personal financial data on this landing page.</p>
+                <p>When you click the Telegram link, you are redirected safely to the official Telegram application governed by Telegram's privacy policies.</p>
+                <p>We respect user privacy and adhere strictly to Meta advertising policies.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div id="termsModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="glass-card bg-slate-900 max-w-lg w-full p-6 rounded-2xl max-h-[80vh] overflow-y-auto space-y-4 border border-white/10 text-left">
+            <div class="flex justify-between items-center border-b border-white/10 pb-3">
+                <h3 class="font-bold text-white text-base">Terms of Service</h3>
+                <button onclick="closeModal('termsModal')" class="text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+            <div class="text-xs text-gray-300 space-y-3 leading-relaxed">
+                <p>By accessing this site, you agree that all content provided in the Telegram channel is for educational purposes only.</p>
+                <p>No material shared should be construed as investment or trading advice. Users are solely responsible for their financial decisions.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Disclaimer Modal -->
+    <div id="disclaimerModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="glass-card bg-slate-900 max-w-lg w-full p-6 rounded-2xl max-h-[80vh] overflow-y-auto space-y-4 border border-white/10 text-left">
+            <div class="flex justify-between items-center border-b border-white/10 pb-3">
+                <h3 class="font-bold text-white text-base">SEBI & Financial Disclaimer</h3>
+                <button onclick="closeModal('disclaimerModal')" class="text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+            <div class="text-xs text-gray-300 space-y-3 leading-relaxed">
+                <p><strong>Educational Purpose Only:</strong> Content, chart setups, and analysis shared in our community are strictly for educational and training purposes.</p>
+                <p><strong>Not SEBI Registered:</strong> We do not offer buy/sell recommendations or guaranteed profit schemes. Stock market investments carry inherent risks.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="glass-card bg-slate-900 max-w-lg w-full p-6 rounded-2xl max-h-[80vh] overflow-y-auto space-y-4 border border-white/10 text-left">
+            <div class="flex justify-between items-center border-b border-white/10 pb-3">
+                <h3 class="font-bold text-white text-base">Contact Us</h3>
+                <button onclick="closeModal('contactModal')" class="text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+            <div class="text-xs text-gray-300 space-y-3 leading-relaxed">
+                <p>For support or educational inquiries, please reach out via our official Telegram channel support admin.</p>
+                <p>Official Channel: <strong>𝙋𝙐𝙎𝙃𝙆𝘼𝙍 𝙍𝘼𝙅 𝙏𝙃𝘼𝙆𝙐𝙍 OFFICIAL</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Handler Script -->
+    <script>
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+    </script>
 </body>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '3381818768668275');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=3381818768668275&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </html>
